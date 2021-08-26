@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Leau's Form Validation</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Contact Request Form</h1>
+      <p id="description">Help us support you the best we can.</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <label for="name" id="name-label">What is your name?</label>
+        <input
+          name="name"
+          id="name"
+          type="text"
+          placeholder="John Doe"
+          required
+        />
+        <label for="email" id="email-label"
+          >At what email adress can we reach you?</label
+        >
+        <input
+          name="email"
+          id="email"
+          type="email"
+          placeholder="john_doe@email.com"
+          required
+        />
+        <div id="div-number">
+          <label for="number" id="number-label">Number</label>
+          <input
+            name="number"
+            type="tel"
+            id="number"
+            placeholder="999-999-9999"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
+          <small>Format: 999-999-9999</small>
+        </div>
+        <div id="radio">
+          <label for="radio"
+            >Have you tried reaching us through our chat support?</label
+          >
+          <div>
+            <input type="radio" name="radio" id="radio1" value="yes" />
+            <label for="radio1">Yes, I couldn't reach anyone.</label>
+          </div>
+
+          <div>
+            <input type="radio" name="radio" id="radio2" value="try" />
+            <label for="radio2">Yes, but my problem wasn't solved.</label>
+          </div>
+          <div>
+            <input type="radio" name="radio" id="radio3" value="no" />
+            <label for="radio3">No.</label>
+          </div>
+        </div>
+        <label for="issue">What kind of issue did you need help with?</label>
+        <select name="dropdown" id="issue">
+          <option value="">Select an issue...</option>
+          <option value="a">Technical problem</option>
+          <option value="b">Payment processing</option>
+          <option value="c">Problem related to an order.</option>
+          <option value="d">General question or support</option>
+        </select>
+        <div id="check">
+          <label for="check">When is the best time to contact you?</label>
+          <div>
+            <input name="check" id="check1" value="day" type="checkbox" />
+            <label for="check1">During the week, in the day. </label>
+          </div>
+          <div>
+            <input name="check" id="check2" value="night" type="checkbox" />
+            <label for="check2">During the week, at night.</label>
+          </div>
+          <div>
+            <input name="check" id="check3" value="weekend" type="checkbox" />
+            <label for="check3">During the weekend.</label>
+          </div>
+        </div>
+        <label for="comments">Any additional comments?</label>
+        <textarea
+          id="comments"
+          placeholder="Enter your comments here."
+        ></textarea>
+        <button type="submit" id="submit" value="Submit">
+          <span id="submit-text">Submit</span>
+        </button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
