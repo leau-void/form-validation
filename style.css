@@ -191,10 +191,11 @@ input:checked + label {
   position: fixed;
   font-size: 50px;
   color: black;
+  top: 0;
   background-color: turquoise;
   min-width: 100vw;
   min-height: 100vh;
-  line-height: 100vh;
+  padding-top: 40vh;
   text-align: center;
   z-index: 99;
 }
