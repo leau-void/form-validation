@@ -48,7 +48,8 @@ const form = {
             customMessage = "The two passwords are not the same.";
             break;
           case "email":
-            customMessage = "An email is separated in two by an '@'.";
+            customMessage =
+              "An email consists of two parts separated by an '@'.";
         }
       }
       target.setCustomValidity(customMessage);
